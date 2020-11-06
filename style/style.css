@@ -3,10 +3,6 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.post-link {
-    text-decoration: none;
-}
-
 /***** HEADER *****/
 
 header {
@@ -37,6 +33,19 @@ header {
     margin-top: 8px;
 }
 
+/***** MAIN CONTENT *****/
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.post-link {
+    text-decoration: none;
+}
+
+/***** FOOTER *****/
+
 footer {
     min-height: 100px;
     background-color: #eaecee70;
@@ -45,5 +54,5 @@ footer {
     justify-content: center;
     align-items: center;
     margin-top: 40px;
-    font-size: 14px;
+    font-size: 0.875em;
 }
