@@ -45,6 +45,58 @@ header {
 main {
     display: flex;
     justify-content: center;
+    margin: 50px 0px;
+}
+
+.content-wrapper {
+    max-width: 750px;
+    min-width: 600px;
+    padding: 0px 16px;
+    width: 100%;
+}
+
+.post {
+    display: flex;
+    border:  1px solid #eaecee;
+    border-radius: 8px;
+    min-height: 200px;
+    overflow: hidden;
+}
+
+.post-image {
+    flex-basis: 40%;
+    background-image: url(../assets/avatar.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.post-content {
+    flex-basis: 60%;
+    padding: 24px;
+}
+
+.post-date {
+    color: #adb5bd;
+    font-size: 0.75em;
+    font-weight: 600;
+}
+
+.post-title {
+    color: #333;
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.post-title h4 {
+    margin: 0;
+}
+
+.post-description {
+    color: #495057;
+    font-weight: 400;
+    margin-top: 5px;
+    line-height: 1.4;
 }
 
 .post-link {
