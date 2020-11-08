@@ -63,6 +63,7 @@ main {
     overflow: hidden;
     transition: all 0.3s ease;
     cursor: pointer;
+    margin: 25px 0px;
 }
 
 .post:hover {
