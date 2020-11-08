@@ -1,18 +1,5 @@
 /* ADD styling for all of the divs in post.html to match  */
 
-.navigation a {
-    text-decoration: none;
-    color: #0b60af;
-    padding: 5px 8px;
-    border: 1px solid #0b60af;
-    border-radius: 5px;
-}
-
-.navigation a:hover {
-    background-color: #0b60af;
-    color: #fff;
-}
-
 #individual-post-title {
     font-size: 2em;
     text-align: center;
