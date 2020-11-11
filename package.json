@@ -1,0 +1,22 @@
+{
+  "name": "my-blog-api",
+  "version": "1.0.0",
+  "description": "My Blog Server",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoseDanielMX/blog-app.git"
+  },
+  "author": "José Vázquez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoseDanielMX/blog-app/issues"
+  },
+  "homepage": "https://github.com/JoseDanielMX/blog-app#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
