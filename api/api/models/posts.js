@@ -9,3 +9,5 @@ class Post {
         /** Add new post */
     }
 }
+
+module.exports = Post;
