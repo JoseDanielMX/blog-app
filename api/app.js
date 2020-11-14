@@ -1,6 +1,10 @@
 const express = require("express");
 const app = express();
-const Post = require(".api/models/posts");
+const cors = require('cors');
+app.use(cors());
+const helmet = require('helmet');
+app.use(helmet());
+const Post = require("./api/models/posts");
 const postsData = new Post();
 
 const posts = [{
