@@ -25,6 +25,7 @@ class Post {
         return posts;
     }
     storeData(rawData) {
+        /** Store data into data.json together with add() function */
         let data = JSON.stringify(rawData);
         fs.writeFileSync(PATH, data);
     }
