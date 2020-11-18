@@ -9,17 +9,20 @@ form > * {
     width: 300px;
 }
 
-#form-post-title, #form-post-content {
+#form-post-title, #form-post-description, #form-post-content {
     border: 1px solid #ced4da;
     padding: 8px;
     border-radius: 5px;
     color: #495057;
 }
 
-#form-post-content {
+#form-post-description, #form-post-content {
     width: 100%;
     min-width: 100%;
     max-width: 100%;
+}
+
+#form-post-content {
     min-height: 300px;
 }
 
