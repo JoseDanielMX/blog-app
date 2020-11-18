@@ -86,7 +86,6 @@ main {
 
 .post-image {
     flex-basis: 40%;
-    background-image: url(../assets/avatar.jpg);
     background-size: cover;
     background-position: center;
 }
