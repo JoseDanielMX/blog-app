@@ -13,13 +13,18 @@ body {
 /***** HEADER *****/
 
 header {
-    background-color: #0084ff;
     color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 50px 0;
+    min-height: 150px;
+    background-position: center;
+}
+
+.default-header {
+    background-color: #0084ff;
 }
 
 .profile-image {    
