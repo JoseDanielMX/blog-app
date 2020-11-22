@@ -5,6 +5,24 @@ app.use(cors());
 const helmet = require('helmet');
 app.use(helmet());
 const Post = require("./api/models/posts");
+const multer = require("multer");
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, "./uploads")
+    },
+    filename: function (req, file, cb) {
+        cb(null, `${file.fieldname}-${Date.now()}${getExt(file.mimetype)}`)
+    }
+});
+const getExt = (mimetype) => {
+    switch(mimetype) {
+        case "image/png":
+            return ".png";
+        case "image/jpeg":
+            return ".jpeg";
+    }
+}
+var upload = multer({ storage: storage });
 const postsData = new Post();
 
 app.use(express.json());
@@ -25,11 +43,11 @@ app.get("/api/posts/:post_id", (req, res) => {
     }
 });
 
-app.post("/api/posts", (req, res) => {
+app.post("/api/posts", upload.single("post-image"), (req, res) => {
     const newPost = {
         "id": `${Date.now()}`,
         "added_date": `${Date.now()}`,
-        "post_image": req.body["post-image"],
+        "post_image": req.file.path,
         "title": req.body.title,
         "description": req.body.description,
         "content": req.body.content
