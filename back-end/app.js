@@ -47,7 +47,7 @@ app.post("/api/posts", upload.single("post-image"), (req, res) => {
     const newPost = {
         "id": `${Date.now()}`,
         "added_date": `${Date.now()}`,
-        "post_image": req.file.path,
+        "post_image": req.file.path.replace(/\\/g, "/"),
         "title": req.body.title,
         "description": req.body.description,
         "content": req.body.content
