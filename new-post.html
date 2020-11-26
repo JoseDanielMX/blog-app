@@ -11,35 +11,29 @@
     </head>
     <body>
         <div class="container new-post-page">
-            <header>
-                <div class="header-container">
-                    <div class="header-blog-text">
-                        <div class="title">New Post</div>
-                        <div class="subtext">
-                            Let's add a new blog post!
-                        </div>
-                    </div>
-                </div>
+            <header class="default-header">
+                        <h1 class="new-post-title">New Post</h1>
+                        <h2 class="new-post-desc">Let's add a new blog post!</h2>
             </header>
-            <div class="main">
-                <div class="main-container">
+            <main>
+                <div class="content-wrapper">
                     <div class="navigation">
                         <a href="index.html">Back</a>
                     </div>
                     <div class="form-container">
                         <form>
-                            <input id="form-post-title" type="text" name="post-title" placeholder="Post Title"/>
-                            <textarea id="form-post-description" name="post-description" placeholder="Post Description" maxlength="200"></textarea>
-                            <textarea id="form-post-content" name="post-content" placeholder="Post Content"></textarea>
+                            <input id="form-post-title" type="text" name="post-title" placeholder="Post Title" required/>
+                            <textarea id="form-post-description" name="post-description" placeholder="Post Description" maxlength="200" required></textarea>
+                            <textarea id="form-post-content" name="post-content" placeholder="Post Content" required></textarea>
                             <div>
                                 <label>Choose Image</label>
-                                <input type="file" id="form-post-image" name="post-image" accept="image/*">
+                                <input type="file" id="form-post-image" name="post-image" accept="image/*" required>
                             </div>
                             <button id="form-post-submit" type="button" onclick="submitNewPost()">Submit</button>
                         </form>
                     </div>
                 </div>
-            </div>
+            </main>
             <footer>
                 <p>Jos&eacute;'s blog</p>
             </footer>
