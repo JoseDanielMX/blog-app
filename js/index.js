@@ -26,7 +26,9 @@ const buildPosts = (blogPosts) => {
         blogPostsContent += `
         <a class="post-link" href="${postLink}">
             <article class="post">
-                <div class="post-image" style="background-image: url(${postImage})"></div>
+                <div class="post-image">
+                    <img src="${postImage}">
+                </div>
                 <div class="post-content">
                     <div class="post-date">${postDate}</div>
                     <div class="post-title"><h4>${blogPost.title}</h4></div>
