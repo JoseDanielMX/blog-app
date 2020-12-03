@@ -4,8 +4,9 @@ const cors = require('cors');
 app.use(cors());
 const helmet = require('helmet');
 app.use(helmet());
-const Post = require("./api/models/posts");
 const multer = require("multer");
+const Post = require("./api/models/posts");
+const postsData = new Post();
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
         cb(null, "./uploads")
@@ -23,7 +24,6 @@ const getExt = (mimetype) => {
     }
 }
 var upload = multer({ storage: storage });
-const postsData = new Post();
 
 app.use(express.json());
 
@@ -31,17 +31,18 @@ app.use("/uploads", express.static("uploads"));
 
 app.get("/api/posts", (req, res) => {
     res.status(200).send(postsData.get());
-});
+})
 
-app.get("/api/posts/:post_id", (req, res) => {
-    const postId = req.params.post_id;
-    const foundPost = postsData.getIndividualBlog(postId);
+app.get("/api/posts/:postId", (req, res) => {
+    const postId = req.params.postId;
+    const posts = postsData.get();
+    const foundPost = posts.find((post) => post.id == postId);
     if (foundPost) {
-        res.status(200).send(foundPost)
+        res.status(200).send(foundPost);
     } else {
         res.status(404).send("Not found");
     }
-});
+})
 
 app.post("/api/posts", upload.single("post-image"), (req, res) => {
     const newPost = {
