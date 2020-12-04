@@ -27,18 +27,19 @@ header {
     background-color: #0084ff;
 }
 
-.profile-image {    
+.header-image {    
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background-image: url(/assets/avatar.jpg);
+    background-image: url(../assets/news-paper.png);
     background-size: cover;
     background-position: center;
 }
 
-.profile-name {
+.header-name {
     font-size: 3em;
     font-weight: bold;
+    padding-top: 15px;
 }
 
 .subtext {
@@ -159,10 +160,20 @@ footer {
     background-color: #eaecee70;
     color: #929eaa;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 40px;
     font-size: 0.875em;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: #0b60af;
 }
 
 /***** TABLET *****/
